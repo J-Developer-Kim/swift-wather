@@ -1,0 +1,38 @@
+//
+//  ForecastTableViewCell.swift
+//  Wather
+//
+//  Created by 김학종 on 2020/03/04.
+//  Copyright © 2020 김학종. All rights reserved.
+//
+
+import UIKit
+
+class ForecastTableViewCell: UITableViewCell {
+    static let identifier = "ForecastTableViewCell"
+
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+        backgroundColor = UIColor.clear
+        
+        statusLabel.textColor = UIColor.white
+        dateLabel.textColor = statusLabel.textColor
+        timeLabel.textColor = statusLabel.textColor
+        temperatureLabel.textColor = statusLabel.textColor
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}
